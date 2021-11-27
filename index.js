@@ -111,6 +111,8 @@ app.put('/team/:id', (req, res) => {
 
     FootballTeam.findByIdAndUpdate(req.params.id, {
         brand: req.body.brand,
+        stadium: req.body.stadium,
+        colors: req.body.colors,
         year: ((parseInt(req.body.year) == NaN) ? 0 : parseInt(req.body.year)),
         GoalsPerMatch: req.body.GoalsPerMatch,
         EuropeanTeam: (req.body.EuropeanTeam === 'true')
